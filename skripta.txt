@@ -1,0 +1,76 @@
+* name means what data to send and id is unique indentifier for element in the document 
+
+* ako je sirina elementa koji je inline-block veca od sirine reda, prebacuje se element u naredni red.. 
+
+* vecinu vremena JS koristimo da menjamo sadrzaj body-ja, tako da je logicno da se skripte stavljaju na dno..  
+
+* https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+
+* Ako je ogromna stranica, onda nije ok ni skripta da se stavlja na dno jer ce puno vremena trebati da se ucita.. Najbolje je sa async i defer.. 
+
+* display:none nam sklanja i element i prostor, a visibility:hidden nam skriva element ali ostavlja prostor za njega.. 
+
+* Ne moze se postavljati width i height na inline elemente! Ako zelimo da elementi budu inline, ali da imaju neke block karakteristike, stavicemo display na inline-block..
+Takodje, mogu samo leva i desna margina i padding.. Inline elementi zauzimaju samo potrebni prostor, block elementi sto vise prostora mogu, 100% od nadredjenog elementa.. 
+
+* Inline block isto kao i inline zauzimaju samo onoliko prostora koliko im treba, nema line breaks, a box model je kao kod block elemenata!  
+
+* absolute i fixed izbacuju element iz tog nekog normalnog flow-a..
+
+* Ako imamo neki element u kom su svi podredjeni elementi "floated", height nadredjenog elementa "collapses", tj. height je 0px.. Koristi se clearfix!
+
+* body element je nadredjeni element svim elementima na strani, tako da sta tu napisemo, neki elementi ce biti nasledjeni, obicno oni koji se odnose na font i text.. Margin 
+i padding se ne nasledjuju! 
+
+
+* centriranje elementa vertikalno i horizontalno u okviru nekog drugog elementa: 
+
+.box {
+    top: 50%;                                               // 50% od nadredjenog elementa 
+    left: 50%;
+    transform: translate(-50%, -50%);                       // vracamo element nazad za 50% od njegove visine (ovo vazi za top)
+}
+
+
+
+************ JS ***********
+
+
+* "use strict" 
+
+msg = "hello";
+msgs = "hello2"; 
+
+* Bez "use strict" nece biti greska, napravice se nova varijabla "msgs", a sa "use strict" bacice gresku, da nismo dobro napisali ime varijable..
+
+* Ne moze overloading, samo se overwrituje postojeca funkcija.. 
+
+
+
+
+
+
+
+******************* GIT **************************
+
+* git je kao "map" gde su kljucevi hash vrednosti, a vrednost je neki sadrzaj.. 
+
+* idemo do direktorijuma projekta i kucamo "git init".. Ovo pravi novi preddirektorijum s imenom .git koji sadrzi sve neophodne fajlove
+tj. skelet za git repozitorijum.. Sada Git ima mesto za cuvanje projekata..
+
+* https://www.youtube.com/watch?v=OVL7R0eT8jw  ODLICAN TUTORIAL za master branch 
+
+
+* git push origin master - saljemo sve fajlove sa lokala na prazan udaljeni repozitorijum
+
+* git push -u origin development 
+
+* kada zavrsim sve, mergujem sa master branchom 
+
+* git brancheve uglavnom cuva u folderu refs-heads.. branch je samo referenca na commit! Zato se folder zove refs, kao references..
+
+* git branch branchname - ovako se kreira novi branch 
+
+
+
+
